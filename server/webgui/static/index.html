@@ -168,44 +168,33 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th><center>Server ID</center></th>
-                                                <th><center>Hostname</center></th>
-                                                <th><center>Start And Stop </center> </th>
-                                                <th><center>Date</center></th>
-                                                <th><center>Time</center></th>
-                                                <th><center>Activity</center></th>
-                                                <th><center>Status</center></th>
+                                                <th>ServerID</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
                                             </tr>
                                         </thead>
                                         <!--<tfoot>
                                             <tr>
-                                                <th><center>Server ID</center></th>
-                                                <th><center>Hostname</center></th>
-                                                <th><center>Start And Stop </center> </th>
-                                                <th><center>Date</center></th>
-                                                <th><center>Time</center></th>
-                                                <th><center>Activity</center></th>
-                                                <th><center>Status</center></th>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
                                             </tr>
                                         </tfoot>-->
-                                        {% for item in ServerActivity %}
+                                        
                                             <tr>
-                                                <td><center>{{item.ServerID}}</center></td>
-                                                <td><center>{{item.Hostname}}</center></td>
-                                                <td><center>{{item.StartActivity}} - {{item.EndActivity}}</center></td>
-                                                <td><center>{{item.date}}</center></td>
-                                                <td><center>{{item.time}}</center></td>
-                                                <td><center>{{item.Activity}}</center></td>
-                                                <td>{% if item.Status == "Success" %}
-                                                    <center><img src="{% static 'images/Success.png' %}" width="15" height="15 alt="Success"></center></td>
-                                                    {% endif %}
-                                                    {% if item.Status == "Error" %}
-                                                    <center><img src="{% static 'images/Error.svg' %}" width="30" height="30 alt="Error"></center></td>
-                                                    {% endif %}{% if item.Status == "Warning" %}
-                                                    <center><img src="{% static 'images/Warning.png' %}" width="15" height="15 alt="Warning"></center></td>
-                                                    {% endif %}
+                                                <td>Donna Snider</td>
+                                                <td>Customer Support</td>
+                                                <td>New York</td>
+                                                <td>27</td>
+                                                <td>2011/01/25</td>
+                                                <td>$112,000</td>
                                             </tr>
-                                        {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>

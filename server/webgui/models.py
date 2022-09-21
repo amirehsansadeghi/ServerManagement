@@ -28,11 +28,12 @@ class ServerStatus(models.Model):
 
 class ServerActivity(models.Model):
     ServerID= models.BigIntegerField(null = True)
+    Hostname = models.CharField(max_length=100 , null=True)
     date =  models.DateField()
     time = models.TimeField()
     StartActivity = models.TimeField()
     EndActivity = models.TimeField()
-    Activity = models.CharField(max_length=20)
+    Activity = models.CharField(max_length=400)
     Status = models.CharField(max_length=20)
 
     def __str__(self):

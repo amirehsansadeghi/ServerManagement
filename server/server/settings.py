@@ -129,5 +129,7 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
-LOGIN_REDIRECT_URL = "webgui"
-#LOGOUT_REDIRECT_URL = "webgui"
+LOGIN_REDIRECT_URL = "webgui/login/"
+LOGIN_URL = "webgui/login/"
+LOGOUT_REDIRECT_URL = "/webgui/login/"
+#LOGOUT_URL="webgui/logout"
