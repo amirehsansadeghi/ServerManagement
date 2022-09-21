@@ -13,10 +13,6 @@ def login(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
-        #if  request.POST.get('remember_me', None):
-        #    request.session.set_expiry(1)
-        #else:
-        #    request.session.set_expiry(0)
         user = authenticate(username=username,password=password)
         if user is not None : 
             auth_login(request, user)
@@ -25,8 +21,11 @@ def login(request):
         'title':'Server Management',
         'PersonName': request.user.first_name +' '+ request.user.last_name,
         'username': request.user,
+        'DisabledServerCount' : "0",
+        'WarningServerCount':"0",
+        'NormalServerCount' : "0",
+        'ErrorServerCount':"0",
         'ServerActivity' : ServerActivity.objects.all(),
-        
         }
             return render(request,"index.html", context)
         else : 
