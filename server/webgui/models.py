@@ -8,7 +8,6 @@ class ServerList(models.Model):
     IPAddress = models.CharField(max_length=100)
     ServerToken = models.CharField(max_length=255)
 
-
     def __str__(self):
      return self.ServerName
 
