@@ -19,8 +19,9 @@ class ServerStatus(models.Model):
     CPUUsage = models.FloatField()
     MemoryUsage = models.FloatField()
     DiskUsage = models.FloatField()
-    UpTime = models.CharField(max_length=20)
-    Health = models.BooleanField()
+    UpTime = models.CharField(max_length=30)
+    Health = models.CharField(max_length=10)
+    ServerToken = models.CharField(max_length=255,null=True)
 
     def __str__(self):
         return str(self.ServerID)

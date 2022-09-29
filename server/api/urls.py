@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [
     path('serveractivity',views.server_activity,name='server_activity'),
+    path('serverstatus',views.server_status,name='server_status'),
 
 ]
