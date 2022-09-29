@@ -17,9 +17,11 @@ from django.urls import path,include
 
 from django.contrib import admin 
 from webgui import urls
+from api import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls,name ='Admin Page'),
     path('webgui/',include('webgui.urls')),
+    path('api/',include('api.urls')),
     
 ]
