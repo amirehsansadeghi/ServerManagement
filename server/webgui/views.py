@@ -49,4 +49,15 @@ def dashboard(request):
         }
     return render(request,"index.html",context)
 
+#@login_required
+def controlpanel(request):
+    context = {
+        'CopyrightYear' : datetime.now().year,
+        'title':'Server Management',
+        'PersonName': request.user.first_name +' '+ request.user.last_name,
+        'username': request.user,
+        'ServerActivity' : ServerActivity.objects.all(),
+        }
+    return render(request,"control-panel.html",context)
 
+    
